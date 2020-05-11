@@ -1,0 +1,63 @@
+body {
+font-family: 'Quicksand', sans-serif;
+margin: 0px;
+}
+
+/*header*/
+.header {
+height: auto;
+width: 90%;
+margin: 15px auto;
+}
+
+.logo {
+width: 25%; 
+height: auto;
+float: left;
+}
+
+.logo img {
+width: 100%; 
+height: auto;
+}
+
+/*header*/
+
+/*Welcome*/
+.welcome {
+height: auto;
+width: 80%;
+margin: 30px auto;
+}
+
+.welcome {
+width: 50%; 
+height: auto;
+float: left;
+}
+
+.welcome h1 {
+margin: 25px 0px 20px 0px;
+padding: 0px;
+font-size: 40px;
+}
+
+.welcome h2 {
+margin: 0px;
+padding: 0px;
+font-size: 20px;
+}
+
+.welcome-image {
+width: 35%; 
+height: auto;
+float: right;
+}
+
+.welcome-image img {
+width: 100%; 
+height: auto;
+}
+
+/*welcome section*/
+
