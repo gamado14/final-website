@@ -17,8 +17,14 @@ session_destroy();
 <body>
 
 <?php
-include_once 'includes/header.php';
-echo "<p>Thank you. You are now logged out.</p>";
-echo "<p><a href=\"index.php\">Return to homepage</a></p>";
-include_once 'includes/footer.php';
+include_once 'header.php';
+?>
+
+<!--thanks Section-->
+<div class="thanks">
+<div class="thanks-text"><h1>We hope to see you again!</h1><h2>You are now logged out.</h2></div>
+<div class="thanks-image"><img src="images/img-thanks.jpg" alt="img-thanks"/></div>
+
+<?php
+include_once 'footer.php';
 ?>
