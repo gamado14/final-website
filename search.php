@@ -1,6 +1,9 @@
 <?php
 session_start();
-require_once 'includes/auth.php';
+$_SESSION['username'] = 'username';
+$_SESSION['password'] = '';
+$_SESSION['time'] = time();
+
 ?>
 
 <!DOCTYPE html>
@@ -18,64 +21,55 @@ require_once 'includes/auth.php';
 <?php
 include_once 'header.php';
 require_once 'login.php';
+require_once 'functions.php';
+include_once 'auth.php';
+
 
 if (isset($_GET['submit'])) {
-	if (empty($_GET['name'])) {
-		echo "<p>Please fill out all of the form fields!</p>";
+	if (empty($_GET['artist_name'])) {
+		echo "<p>To start exploring some art, you need to fill out all of the form fields.</p>";
 	} else {
-		$conn = new mysqli($hn, $un, $pw, $db);
+		$conn = new mysqli($hostname, $username, $password, $database);
 		if ($conn->connect_error) die($conn->connect_error);
-		$name = sanitizeMySQL($conn, $_GET['name']);
-		$query = "SELECT * FROM user NATURAL JOIN collection NATURAL JOIN collection_item NATURAL JOIN art NATURAL JOIN content NATURAL JOIN asset WHERE `user_id`= $_SESSION["user_id"]";
+		$artist_name = sanitizeMySQL($conn, $_GET['artist_name']);
+		$query = "SELECT * FROM art WHERE artist_name LIKE '%$artist_name%'";
 		$result = $conn->query($query);
 		if (!$result) {
 			die ("Database access failed: " . $conn->error);
 		} else {
 			$rows = $result->num_rows;
 			if ($rows) {
-				echo 
-				"<h1>Results</h1>
-				<table><tr>
-				
-				<th>art_id</th>
-				<th>title</th>
-				<th>artist_name/th>
-				<th>date_created</th>
-				<th>image_file</th>
-				<th>theme</th>
-				<th>content_file_name</th>
-				
-				</tr>";
-				
+				echo "<h1>My results</h1><table><tr><th>art_id</th><th>title</th><th>artist_name</th><th>date_created</th><th>image_file</th></tr>";
 				while ($row = $result->fetch_assoc()) {
 					echo "<tr>";
-					echo "<td>"
-					.$row["art_id"]."</td><td>"
-					.$row["title"]."</td><td>"
-					.$row["artist_name"]."</td><td>"
-					.$row["date_created"]."</td><td>"
-					.$row["theme"]."</td><td>"
-					.$row["content_file_name"]."</td><td>"
-					.$row["image_file"]."</td>";
+					echo "<td>".$row["art_id"]."</td><td>".$row["title"]."</td><td>".$row["artist_name"]."</td><td>".$row["date_created"]."</td><td>".$row["image_file"]."</td>";
 					echo "</tr>";
 				}
 				echo "</table>";
 			} else {
-				echo "<p>Sorry, there are no results for this query!</p>";
+				echo "<p>No results!</p>";
 			}
 			echo "<h2>Search Again</h2>";
 		}
 	}
 }
 ?>
+<!--Search Section-->
+<div class="search">
+<div class="search-text"><h1>Explore some art</h1><h2>To found out more about your favorite artists just type in a name.</h2></div>
+</div>
 
 <!--Search Form-->
 <form method="get" action="search.php">
 	<fieldset>
 		<legend>Explore Art & Themes</legend>
-		<input type="text" name="name" required><br> 
+		<input type="text" name="artist_name" required><br> 
 		<input type="submit" name="submit">
 	</fieldset>
 </form>
+
+
+<?php include_once ('footer.php');?>
+
 </body>
 </html>
