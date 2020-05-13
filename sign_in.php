@@ -15,7 +15,6 @@ session_start();
 <body>
 
 <?php
-
 include_once 'header.php';
 require_once 'login.php';
 require_once 'functions.php';
@@ -45,19 +44,24 @@ if (isset($_POST['submit'])) { //check if the form has been submitted
 	}
 }
 ?>
+<div style="height: 100px;"></div>
 
 <!--Sign_in Section-->
 <div class="sign_in">
 <div class="sign_in-text"><h1>Learn more about art</h1><h2>Explore your collections and favorite artists!</h2></div>
 </div>
 
-<fieldset style="width:30%"><legend>Sign in</legend>
+<div class="sign_in-form">
+<fieldset style="width:100%"><legend>Sign in</legend>
 <form method="POST" action="sign_in.php">
-Username:<br><input type="text" name="username" size="40"><br>
-Password:<br><input type="password" name="password" size="40"><br>
+Username:<br><input type="text" name="username" size="30"><br>
+Password:<br><input type="password" name="password" size="30"><br>
 <input type="submit" name="submit" value="Submit">
 </form>
 </fieldset>
+</div>
+
+<div class="clear"></div>
 
 <?php include_once ('footer.php');?>
 
