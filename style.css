@@ -5,9 +5,8 @@ margin: 0px;
 
 /*header*/
 .header {
-height: auto;
-width: 90%;
-margin: 15px auto;
+padding: 20px;
+text-align: center;
 }
 
 .logo {
@@ -24,7 +23,7 @@ height: auto;
 .top-menu {
 float: right;
 text-align: right;
-font-size: 1.5em;
+font-size: 1.2em;
 
 padding: 0px;
 }
@@ -62,21 +61,82 @@ font-size: 1em;
 padding: 0.5em 0px;
 }
 }
+
 /*header*/
 
+/*footer*/
+.footer {
+padding: 20px;
+text-align: center;
+}
 
-/*Welcome*/
+.logo {
+width: 25%; 
+height: auto;
+float: left;
+}
+
+.logo img {
+width: 100%; 
+height: auto;
+}
+
+.bottom-menu {
+float: right;
+text-align: right;
+font-size: 1.5em;
+padding: 0px;
+}
+
+.bottom-menu ul {
+list-style: none;
+text-align: right;
+margin: 0px;
+padding: 1.5em 0px;
+}
+
+.bottom-menu li {
+display: inline;
+margin: 0px 5px;
+text-decoration: none;
+}
+
+.bottom-menu li a {
+display: inline;
+margin: 0px 5px;
+text-decoration: none;
+color: #000000;
+}
+
+.bottom-menu li a:hover {
+text-decoration: none;
+color: #F15A29;
+}
+
+@media screen and (max-width:700px){
+  .bottom-menu {
+font-size: 1em;
+}
+.bottom-menu ul {
+padding: 0.5em 0px;
+}
+}
+
+/*footer*/
+
+
+/*Welcome section*/
 
 .welcome {
 height: auto;
 width: 80%;
 margin: 30px auto;
+text-align: center;
 }
 
 .welcome-text {
-width: 50%; 
 height: auto;
-float: left;
+margin: 30px auto;
 }
 
 .welcome-text h1 {
@@ -93,8 +153,8 @@ font-size: 20px;
 
 .welcome-image {
 width: 35%; 
+margin: 0px auto;
 height: auto;
-float: right;
 }
 
 .welcome-image img {
@@ -102,8 +162,10 @@ width: 100%;
 height: auto;
 }
 
-/*welcome section*/
 
+/*Welcome section*/
+
+.clear {clear:both}
 
 /*Sign_in*/
 
@@ -111,12 +173,12 @@ height: auto;
 height: auto;
 width: 80%;
 margin: 30px auto;
+text-align: center;
 }
 
 .sign_in-text {
-width: 50%; 
 height: auto;
-float: left;
+margin: 30px auto;
 }
 
 .sign_in-text h1 {
@@ -126,23 +188,24 @@ font-size: 40px;
 }
 
 .sign_in-text h2 {
-margin: 0px;
 padding: 0px;
 font-size: 20px;
 }
 
-.sign_in-image {
+.sign_in-form {
 width: 35%; 
 height: auto;
-float: right;
+margin: 50px auto 100px;
 }
 
-.sign_in-image img {
-width: 100%; 
+.sign_in-form form {
+width: 90%; 
 height: auto;
+margin: 0px auto;
 }
 
 /*Sign_in*/
+.clear {clear:both}
 
 
 
@@ -152,12 +215,12 @@ height: auto;
 height: auto;
 width: 80%;
 margin: 30px auto;
+text-align: center;
 }
 
 .search-text {
-width: 50%; 
 height: auto;
-float: left;
+margin: 0px auto;
 }
 
 .search-text h1 {
@@ -172,18 +235,19 @@ padding: 0px;
 font-size: 20px;
 }
 
-.search-image {
+.search-form {
 width: 35%; 
 height: auto;
-float: right;
+margin: 50px auto 100px;
 }
 
-.search-image img {
-width: 100%; 
+.search-form form {
+width: 90%; 
 height: auto;
 }
 
 /*Search*/
+.clear {clear:both}
 
 
 /*View collection Section*/
@@ -192,12 +256,13 @@ height: auto;
 height: auto;
 width: 80%;
 margin: 30px auto;
+text-align: center;
 }
 
 .view_coll-text {
-width: 50%; 
+margin: 0px auto;
 height: auto;
-float: left;
+
 }
 
 .view_coll-text h1 {
@@ -212,20 +277,21 @@ padding: 0px;
 font-size: 20px;
 }
 
-.view_coll-image {
+.view_coll-form {
 width: 35%; 
 height: auto;
-float: right;
+margin: 50px auto 100px;
 }
 
-.view_coll-image img {
-width: 100%; 
+.view_coll-form form {
+width: 90%; 
 height: auto;
 }
 
 /*View collection Section*/
 
 
+.clear {clear:both}
 
 /*thanks*/
 
@@ -233,12 +299,13 @@ height: auto;
 height: auto;
 width: 80%;
 margin: 30px auto;
+text-align: center;
 }
 
 .thanks-text {
-width: 50%; 
+
 height: auto;
-float: left;
+
 }
 
 .thanks-text h1 {
@@ -256,12 +323,13 @@ font-size: 20px;
 .thanks-image {
 width: 35%; 
 height: auto;
-float: right;
+margin: 50px auto 100px;
 }
 
 .thanks-image img {
-width: 100%; 
+width: 70%; 
 height: auto;
 }
 
-/*Sign_out*/
+/*thanks*/
+.clear {clear:both}
