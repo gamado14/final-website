@@ -54,12 +54,15 @@ if (isset($_GET['submit'])) {
 	}
 }
 ?>
+<div style="height: 100px;"></div>
+
 <!--Search Section-->
 <div class="search">
 <div class="search-text"><h1>Explore some art</h1><h2>To found out more about your favorite artists just type in a name.</h2></div>
 </div>
 
 <!--Search Form-->
+<div class="search-form">
 <form method="get" action="search.php">
 	<fieldset>
 		<legend>Explore Art & Themes</legend>
@@ -67,8 +70,9 @@ if (isset($_GET['submit'])) {
 		<input type="submit" name="submit">
 	</fieldset>
 </form>
+</div>
 
-
+<div class="clear"></div>
 <?php include_once ('footer.php');?>
 
 </body>
