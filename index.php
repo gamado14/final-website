@@ -16,8 +16,9 @@ session_start();
 <body>
 <?php include_once 'header.php';?>
 
+<div style="height: 100px;"></div>
 
-<div class="clear"></div>
+<!--Welcome Section-->
 
 <div class="welcome">
 <div class="welcome-text"><h1>Welcome to Art Thread!</h1><h2>Go to your collection or explore some art.</h2></div>
@@ -26,7 +27,8 @@ session_start();
 
 <div class="clear"></div>
 
-<?php include_once ('footer.php');?>
+
+<?php include_once 'footer.php';?>
 
 </body>
 </html>
