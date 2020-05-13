@@ -11,7 +11,7 @@
 
 <body>
 
-<div class="header"> 
+<div class="footer"> 
 <div class="logo"><a href="index.php"><img src="images/logo.png" alt="logo"/></a></div>
 
 <nav class="top-menu">
