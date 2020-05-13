@@ -9,9 +9,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <div class="header"> 
 <div class="logo"><a href="index.php"><img src="images/logo.png" alt="logo"/></a></div>
+
 <nav class="top-menu">
+	
 <ul>
 <li><a href="sign_in.php">Sign in</a></li>
 <li><a href="search.php">Explore Art and Themes</a></li>
