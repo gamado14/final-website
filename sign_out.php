@@ -19,12 +19,18 @@ session_destroy();
 <?php
 include_once 'header.php';
 ?>
+<div style="height: 100px;"></div>
+
 
 <!--thanks Section-->
 <div class="thanks">
 <div class="thanks-text"><h1>We hope to see you again!</h1><h2>You are now logged out.</h2></div>
 <div class="thanks-image"><img src="images/img-thanks.jpg" alt="img-thanks"/></div>
+</div>
 
+<div class="clear"></div>
 <?php
 include_once 'footer.php';
 ?>
+</body>
+</html>
