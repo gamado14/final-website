@@ -78,12 +78,15 @@ if (isset($_GET['submit'])) {
 	}
 }
 ?>
+<div style="height: 100px;"></div>
+
 <!--View_coll Section-->
 <div class="view_coll">
-<div class="view_coll-text"><h1>See your collection</h1><h2>Sign in</h2></div>
+<div class="view_coll-text"><h1>See your collection</h1><h2>Expand the knowledge about your favorite artists in your personalized collections.</h2></div>
 </div>
 
-<!--Search Form-->
+<!--View Colle Form-->
+<div class="view_coll-form">
 <form method="get" action="viewcolle.php">
 	<fieldset>
 		<legend>My Collection</legend>
@@ -91,7 +94,9 @@ if (isset($_GET['submit'])) {
 		<input type="submit" name="submit">
 	</fieldset>
 </form>
+</div>
 
+<div class="clear"></div>
 
 <?php include_once ('footer.php');?>
 
